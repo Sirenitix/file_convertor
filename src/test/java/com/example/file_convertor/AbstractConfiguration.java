@@ -22,16 +22,6 @@ public abstract class AbstractConfiguration {
     @Autowired
     FileController fileController;
 
-    public final String TEST_TEMPLATE = "{\n" +
-                            "  \"name\": \"string\",\n" +
-                            "  \"price\": 0,\n" +
-                            "  \"available\": true,\n" +
-                            "  \"version\": 0,\n" +
-                            "  \"functions\": [\n" +
-                            "    \"string\"\n" +
-                            "  ]\n" +
-                            "}";
-
 
     @BeforeEach
     protected void setup(){
