@@ -75,7 +75,6 @@ class FileConvertorApplicationTests extends AbstractConfiguration{
 
     @Test
     void testXLS() throws IOException {
-        List<List<String>> records = new ArrayList<>();
         try(ZipFile zipFile = new ZipFile(System.getProperty("user.dir") + "/src/main/resources/static/file.zip");) {
             Enumeration<? extends ZipEntry> entries = zipFile.entries();
             while (entries.hasMoreElements()) {
