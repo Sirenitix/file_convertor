@@ -1,6 +1,10 @@
 package com.example.file_convertor.service.impl;
 
+import com.example.file_convertor.entity.Game;
 import com.example.file_convertor.service.FileService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -40,5 +44,10 @@ public class FileServiceImpl implements FileService {
         }
         fileNames.append(" - ").append("this files compressed to").append(" ").append(zipName);
         return fileNames.toString();
+    }
+
+    @Override
+    public String convertToJson(Game game) {
+        return new Gson().toJson(game);
     }
 }
